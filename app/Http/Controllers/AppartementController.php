@@ -25,8 +25,8 @@ class AppartementController extends Controller
             'Anrede' => 'required',
             'Adults' => 'required',
             'Children' => 'required',
-            'arrival_date' => 'required',
-            'departure_date' => 'required',
+            'arrival_date' => 'required|date',
+            'departure_date' => 'required|date|after:arrival_date',
             'room_id' => 'required',
             'message' => 'required',
         ]);

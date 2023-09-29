@@ -72,45 +72,41 @@
                         </div>
                         <div class="col-md-6">
                             <div class="inputs-filed input-group mb-30 custom-select-1">
-                                <select name="Adults"autocomplete="off" >
+                                <select name="Adults" autocomplete="off">
                                     <option value="" disabled selected>Adults</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
+                                    @for ($i = 1; $i <= 7; $i++)
+                                        <option value="{{ $i }}"
+                                            {{ session('erwachsene') == $i ? 'selected' : '' }}>{{ $i }}</option>
+                                    @endfor
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="inputs-filed input-group mb-30 custom-select-1">
-                                <select name="Children" id="childNumber"autocomplete="off">
+                                <select name="Children" id="childNumber" autocomplete="off">
                                     <option value="" disabled selected>Children</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
+                                    @for ($i = 1; $i <= 7; $i++)
+                                        <option value="{{ $i }}" {{ session('kinder') == $i ? 'selected' : '' }}>
+                                            {{ $i }}</option>
+                                    @endfor
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="inputs-filed input-group mb-30">
                                 <div class="icon"><i class="fal fa-calendar-alt"></i></div>
-                                <input type="text" placeholder="Arrival Date" name="arrival_date" id="arrival-date" autocomplete="off">
+                                <input type="text" placeholder="Arrival Date" name="arrival_date" id="arrival-date"
+                                    autocomplete="off" value="{{ session('anreisedatum') }}">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="inputs-filed input-group mb-30">
                                 <div class="icon"><i class="fal fa-calendar-alt"></i></div>
                                 <input type="text" placeholder="Departure Date" name="departure_date" autocomplete="off"
-                                    id="departure-date">
+                                    id="departure-date" value="{{ session('abreisedatum') }}">
                             </div>
                         </div>
+
                         <div class="col-md-12">
                             <div class="inputs-filed input-group mb-30 custom-select-1">
                                 <select name="room_id" multiple autocomplete="off">

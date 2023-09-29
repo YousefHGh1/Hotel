@@ -344,38 +344,35 @@
                     @endif
 
                 @empty
-                    <!-- Feature Loop -->
-                    <div class="row features-loop">
-                        <div class="col-lg-4 col-sm-6 order-1">
-                            <div class="feature-box with-hover-img wow fadeInLeft" data-wow-delay=".3s">
-                                <div class="icon">
-                                    <i class="flaticon-rating"></i>
-                                </div>
-                                <h3><a href="#">Have High Rating</a></h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna..
-                                </p>
-                                <span class="count">01</span>
-                                <div class="hover-img"
-                                    style="background-image: url({{ asset('WebsiteHotel/assets/img/feature/01.jpg') }});">
-                                </div>
+                    <div class="col-lg-4 col-sm-6 order-1">
+                        <div class="feature-box with-hover-img wow fadeInLeft" data-wow-delay=".3s">
+                            <div class="icon">
+                                <i class="flaticon-rating"></i>
+                            </div>
+                            <h3><a href="#">Have High Rating</a></h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna..
+                            </p>
+                            <span class="count">01</span>
+                            <div class="hover-img"
+                                style="background-image: url({{ asset('WebsiteHotel/assets/img/feature/01.jpg') }});">
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6 order-2">
-                            <div class="feature-box wow fadeInUp" data-wow-delay=".4s">
-                                <div class="icon">
-                                    <i class="flaticon-clock"></i>
-                                </div>
-                                <h3><a href="#">Quiet Hours</a></h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna..
-                                </p>
-                                <span class="count">02</span>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 order-2">
+                        <div class="feature-box with-hover-img wow fadeInLeft" data-wow-delay=".5s">
+                            <div class="icon">
+                                <i class="flaticon-rating"></i>
                             </div>
-                        </div>
+                            <h3><a href="#">Have High Rating</a></h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna..
+                            </p>
+                            <span class="count">02</span>
 
+                        </div>
                     </div>
                 @endforelse
             </div>
@@ -398,6 +395,16 @@
                         </div>
                     @endif
                 @empty
+                    <div class="col">
+                        <div class="slider-img"
+                            style="background-image: url({{ asset('WebsiteHotel/assets/img/room-slider/01.jpg') }});">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="slider-img"
+                            style="background-image: url({{ asset('WebsiteHotel/assets/img/room-slider/02.jpg') }});">
+                        </div>
+                    </div>
                 @endforelse
             </div>
         </div>
@@ -415,11 +422,29 @@
                                             <div class="icon">
                                                 <i class="flaticon-hotel"></i>
                                             </div>
-                                            <h3><a href="#">{{$section->name}}</a></h3>
-                                            <p>{{$section->description}}</p>
+                                            <h3><a href="#">{{ $section->name }}</a></h3>
+                                            <p>{{ $section->description }}</p>
                                         </div>
                                     @endif
                                 @empty
+                                    <div class="single-content">
+                                        <div class="icon">
+                                            <i class="flaticon-hotel"></i>
+                                        </div>
+                                        <h3><a href="#">Luxury Apartment</a></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                            sed do eiusmod tempor
+                                            incididunt ut labore et dolore magna.</p>
+                                    </div>
+                                    <div class="single-content">
+                                        <div class="icon">
+                                            <i class="flaticon-hotel"></i>
+                                        </div>
+                                        <h3><a href="#">Luxury Apartment</a></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                            sed do eiusmod tempor
+                                            incididunt ut labore et dolore magna.</p>
+                                    </div>
                                 @endforelse
                             </div>
                         </div>
@@ -427,90 +452,6 @@
                 </div>
             </div>
         </div>
-
-        {{-- <div class="container-fluid p-0">
-                <div class="row rooms-slider-one">
-                    <div class="col">
-                        <div class="slider-img"
-                            style="background-image: url({{ asset('WebsiteHotel/assets/img/room-slider/01.jpg') }});">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="slider-img"
-                            style="background-image: url({{ asset('WebsiteHotel/assets/img/room-slider/02.jpg') }});">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="slider-img"
-                            style="background-image: url({{ asset('WebsiteHotel/assets/img/room-slider/03.jpg') }});">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="slider-img"
-                            style="background-image: url({{ asset('WebsiteHotel/assets/img/room-slider/04.jpg') }});">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="slider-img"
-                            style="background-image: url({{ asset('WebsiteHotel/assets/img/room-slider/05.jpg') }});">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="rooms-content-wrap">
-                <div class="container">
-                    <div class="row justify-content-center justify-content-md-start">
-                        <div class="col-xl-4 col-lg-5 col-sm-8">
-                            <div class="room-content-box">
-                                <div class="slider-count"></div>
-                                <div class="slider-count-big"></div>
-                                <div class="room-content-slider">
-                                    <div class="single-content">
-                                        <div class="icon">
-                                            <i class="flaticon-hotel"></i>
-                                        </div>
-                                        <h3><a href="#">Luxury Apartment</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore magna.</p>
-                                    </div>
-                                    <div class="single-content">
-                                        <div class="icon">
-                                            <i class="flaticon-hotel"></i>
-                                        </div>
-                                        <h3><a href="#">Luxury Apartment</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore magna.</p>
-                                    </div>
-                                    <div class="single-content">
-                                        <div class="icon">
-                                            <i class="flaticon-hotel"></i>
-                                        </div>
-                                        <h3><a href="#">Luxury Apartment</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore magna.</p>
-                                    </div>
-                                    <div class="single-content">
-                                        <div class="icon">
-                                            <i class="flaticon-hotel"></i>
-                                        </div>
-                                        <h3><a href="#">Luxury Apartment</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore magna.</p>
-                                    </div>
-                                    <div class="single-content">
-                                        <div class="icon">
-                                            <i class="flaticon-hotel"></i>
-                                        </div>
-                                        <h3><a href="#">Luxury Apartment</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore magna.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
 
 
     </section>
